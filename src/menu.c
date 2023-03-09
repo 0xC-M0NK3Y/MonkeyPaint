@@ -21,5 +21,17 @@ int menu_click(const menu_t *menu, drawer_t *drawer) {
 			return 1;
 		}
 	}
+	for (int i = 0; i < FORMS_NUMBER; i++) {
+		if (click_on(&drawer->pos, &menu->forms[i])) {
+			switch (i) {
+			case FORM_POINT: drawer->form = FORM_POINT; break;
+			case FORM_CIRCLE: drawer->form = FORM_CIRCLE; break;
+			case FORM_RECT: drawer->form = FORM_RECT; break;
+			default: break;
+			}
+		}
+	}
+	if (click_on(&drawer->pos, &menu->size_input))
+		drawer->on_size_input = TRUE;
 	return 1;
 }

@@ -2,6 +2,7 @@
 # define STRUCTS_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 #include "defines.h"
 
@@ -14,7 +15,6 @@ typedef enum form {
 	FORM_POINT,
 	FORM_RECT,
 	FORM_CIRCLE,
-	FORM_TRIANGLE,
 	FORMS_NUMBER
 }	form_e;
 
@@ -23,6 +23,7 @@ typedef struct drawer {
 	color_t		color;
 	uint32_t	size;
 	form_e		form;
+	int			on_size_input;
 }	drawer_t;
 
 typedef struct sdlenv {
@@ -49,6 +50,10 @@ typedef enum menu_colors {
 typedef struct menu {
 	SDL_Rect	colors[MENU_COLORS_NUMBER];
 	SDL_Rect	forms[FORMS_NUMBER];
+	SDL_Rect	actual_color;
+	TTF_Font    *font;
+	SDL_Rect	size_input;
+	int			clicked;
 }	menu_t;
 
 typedef struct param {

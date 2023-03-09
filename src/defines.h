@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 
-#define WIN_WIDTH	800
-#define WIN_HEIGHT	600
+#define WIN_WIDTH	1600
+#define WIN_HEIGHT	920
 
 typedef uint32_t	flag_t;
 typedef uint32_t	color_t;
@@ -29,6 +29,6 @@ typedef uint32_t	color_t;
 			((color >> 8) & 0xFF),  \
 			((color >> 0) & 0xFF)
 
-#define MENU_SIZE	(WIN_WIDTH*0.15)
+#define MENU_SIZE	(WIN_WIDTH*0.13)
 
 #endif

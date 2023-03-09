@@ -3,7 +3,7 @@
 
 #include "structs.h"
 
-int draw(sdlenv_t *sdl, const drawer_t *drawer, const menu_t *menu);
-int draw_menu(sdlenv_t *sdl, const menu_t *menu);
+int draw(const sdlenv_t *sdl, const drawer_t *drawer, const menu_t *menu);
+int draw_menu(const sdlenv_t *sdl, const menu_t *menu, const drawer_t *drawer);
 
 #endif
