@@ -23,7 +23,11 @@ typedef struct drawer {
 	color_t		color;
 	uint32_t	size;
 	form_e		form;
+	// Better to define value and juste one int on_input; ...
 	int			on_size_input;
+	int			on_red_input;
+	int			on_green_input;
+	int			on_blue_input;
 }	drawer_t;
 
 typedef struct sdlenv {
@@ -53,6 +57,9 @@ typedef struct menu {
 	SDL_Rect	actual_color;
 	TTF_Font    *font;
 	SDL_Rect	size_input;
+	SDL_Rect	red;
+	SDL_Rect	blue;
+	SDL_Rect	green;
 	int			clicked;
 }	menu_t;
 

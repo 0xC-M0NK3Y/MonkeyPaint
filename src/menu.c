@@ -33,5 +33,11 @@ int menu_click(const menu_t *menu, drawer_t *drawer) {
 	}
 	if (click_on(&drawer->pos, &menu->size_input))
 		drawer->on_size_input = TRUE;
+	if (click_on(&drawer->pos, &menu->red))
+		drawer->on_red_input = TRUE;
+	if (click_on(&drawer->pos, &menu->blue))
+		drawer->on_blue_input = TRUE;
+	if (click_on(&drawer->pos, &menu->green))
+		drawer->on_green_input = TRUE;
 	return 1;
 }

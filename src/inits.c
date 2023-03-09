@@ -39,13 +39,25 @@ static int init_menu(sdlenv_t *sdl, menu_t *menu, const drawer_t *drawer) {
 	menu->size_input.y = menu->forms[FORMS_NUMBER-1].y + WIN_HEIGHT/8;
 	menu->size_input.w = MENU_SIZE-MENU_SIZE/3;
 	menu->size_input.h = 30;
+	menu->red.x = WIN_WIDTH-MENU_SIZE+MENU_SIZE/3*0+MENU_SIZE/20;
+	menu->red.y = menu->size_input.y + WIN_HEIGHT/8;
+	menu->red.w = MENU_SIZE/3-MENU_SIZE/10;
+	menu->red.h = 30;
+	menu->blue.x = WIN_WIDTH-MENU_SIZE+MENU_SIZE/3*1+MENU_SIZE/20;
+	menu->blue.y = menu->size_input.y + WIN_HEIGHT/8;
+	menu->blue.w = MENU_SIZE/3-MENU_SIZE/10;
+	menu->blue.h = 30;
+	menu->green.x = WIN_WIDTH-MENU_SIZE+MENU_SIZE/3*2+MENU_SIZE/20;
+	menu->green.y = menu->size_input.y + WIN_HEIGHT/8;
+	menu->green.w = MENU_SIZE/3-MENU_SIZE/10;
+	menu->green.h = 30;
 	menu->font = TTF_OpenFont("ressources/fonts/comicate.ttf", 50);
 	if (menu->font == NULL)
 		return -__LINE__;
 	menu->actual_color.x = WIN_WIDTH-MENU_SIZE/2-10;
 	menu->actual_color.y = WIN_HEIGHT - WIN_HEIGHT/20;
-	menu->actual_color.w = 20;
-	menu->actual_color.h = 20;
+	menu->actual_color.w = 40;
+	menu->actual_color.h = 40;
 	draw_menu(sdl, menu, drawer);
 	return 1;
 }

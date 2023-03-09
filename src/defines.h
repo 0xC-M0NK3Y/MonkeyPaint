@@ -31,4 +31,6 @@ typedef uint32_t	color_t;
 
 #define MENU_SIZE	(WIN_WIDTH*0.13)
 
+#define BUFFER_SIZE	5
+
 #endif
